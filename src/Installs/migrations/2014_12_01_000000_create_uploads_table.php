@@ -4,12 +4,11 @@
  * Help: http://laraadmin.com
  * LaraAdmin is open-sourced software licensed under the MIT license.
  * Developed by: Dwij IT Solutions
- * Developer Website: http://dwijitsolutions.com
+ * Developer Website: http://dwijitsolutions.com.
  */
 
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
 use Dwij\Laraadmin\Models\Module;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateUploadsTable extends Migration
 {
@@ -20,81 +19,81 @@ class CreateUploadsTable extends Migration
      */
     public function up()
     {
-        Module::generate("Uploads", 'uploads', 'name', 'fa-files-o', [
+        Module::generate('Uploads', 'uploads', 'name', 'fa-files-o', [
             [
-                "colname" => "name",
-                "label" => "Name",
-                "field_type" => "Name",
-                "unique" => false,
-                "defaultvalue" => "",
-                "minlength" => 5,
-                "maxlength" => 250,
-                "required" => true,
-                "listing_col" => true
+                'colname'      => 'name',
+                'label'        => 'Name',
+                'field_type'   => 'Name',
+                'unique'       => false,
+                'defaultvalue' => '',
+                'minlength'    => 5,
+                'maxlength'    => 250,
+                'required'     => true,
+                'listing_col'  => true,
             ], [
-                "colname" => "path",
-                "label" => "Path",
-                "field_type" => "String",
-                "unique" => false,
-                "defaultvalue" => "",
-                "minlength" => 0,
-                "maxlength" => 250,
-                "required" => false,
-                "listing_col" => true
+                'colname'      => 'path',
+                'label'        => 'Path',
+                'field_type'   => 'String',
+                'unique'       => false,
+                'defaultvalue' => '',
+                'minlength'    => 0,
+                'maxlength'    => 250,
+                'required'     => false,
+                'listing_col'  => true,
             ], [
-                "colname" => "extension",
-                "label" => "Extension",
-                "field_type" => "String",
-                "unique" => false,
-                "defaultvalue" => "",
-                "minlength" => 0,
-                "maxlength" => 20,
-                "required" => false,
-                "listing_col" => true
+                'colname'      => 'extension',
+                'label'        => 'Extension',
+                'field_type'   => 'String',
+                'unique'       => false,
+                'defaultvalue' => '',
+                'minlength'    => 0,
+                'maxlength'    => 20,
+                'required'     => false,
+                'listing_col'  => true,
             ], [
-                "colname" => "caption",
-                "label" => "Caption",
-                "field_type" => "String",
-                "unique" => false,
-                "defaultvalue" => "",
-                "minlength" => 0,
-                "maxlength" => 250,
-                "required" => false,
-                "listing_col" => true
+                'colname'      => 'caption',
+                'label'        => 'Caption',
+                'field_type'   => 'String',
+                'unique'       => false,
+                'defaultvalue' => '',
+                'minlength'    => 0,
+                'maxlength'    => 250,
+                'required'     => false,
+                'listing_col'  => true,
             ], [
-                "colname" => "user_id",
-                "label" => "Owner",
-                "field_type" => "Dropdown",
-                "unique" => false,
-                "defaultvalue" => "1",
-                "minlength" => 0,
-                "maxlength" => 0,
-                "required" => false,
-                "listing_col" => true,
-                "popup_vals" => "@users",
+                'colname'      => 'user_id',
+                'label'        => 'Owner',
+                'field_type'   => 'Dropdown',
+                'unique'       => false,
+                'defaultvalue' => '1',
+                'minlength'    => 0,
+                'maxlength'    => 0,
+                'required'     => false,
+                'listing_col'  => true,
+                'popup_vals'   => '@users',
             ], [
-                "colname" => "hash",
-                "label" => "Hash",
-                "field_type" => "String",
-                "unique" => false,
-                "defaultvalue" => "",
-                "minlength" => 0,
-                "maxlength" => 250,
-                "required" => false,
-                "listing_col" => true
+                'colname'      => 'hash',
+                'label'        => 'Hash',
+                'field_type'   => 'String',
+                'unique'       => false,
+                'defaultvalue' => '',
+                'minlength'    => 0,
+                'maxlength'    => 250,
+                'required'     => false,
+                'listing_col'  => true,
             ], [
-                "colname" => "public",
-                "label" => "Is Public",
-                "field_type" => "Checkbox",
-                "unique" => false,
-                "defaultvalue" => "0",
-                "minlength" => 0,
-                "maxlength" => 0,
-                "required" => false,
-                "listing_col" => true
-            ]
+                'colname'      => 'public',
+                'label'        => 'Is Public',
+                'field_type'   => 'Checkbox',
+                'unique'       => false,
+                'defaultvalue' => '0',
+                'minlength'    => 0,
+                'maxlength'    => 0,
+                'required'     => false,
+                'listing_col'  => true,
+            ],
         ]);
-        
+
         /*
         Module::generate("Module_Name", "Table_Name", "view_column_name" "Fields_Array");
 

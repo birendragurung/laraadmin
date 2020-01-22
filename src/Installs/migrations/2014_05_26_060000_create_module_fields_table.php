@@ -4,12 +4,12 @@
  * Help: http://laraadmin.com
  * LaraAdmin is open-sourced software licensed under the MIT license.
  * Developed by: Dwij IT Solutions
- * Developer Website: http://dwijitsolutions.com
+ * Developer Website: http://dwijitsolutions.com.
  */
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateModuleFieldsTable extends Migration
 {
@@ -35,7 +35,7 @@ class CreateModuleFieldsTable extends Migration
             $table->boolean('required')->default(false);
             $table->text('popup_vals');
             $table->integer('sort')->unsigned()->default(0);
-			$table->boolean('listing_col')->default(true);
+            $table->boolean('listing_col')->default(true);
             $table->timestamps();
         });
     }

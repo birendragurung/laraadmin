@@ -4,52 +4,50 @@
  * Help: http://laraadmin.com
  * LaraAdmin is open-sourced software licensed under the MIT license.
  * Developed by: Dwij IT Solutions
- * Developer Website: http://dwijitsolutions.com
+ * Developer Website: http://dwijitsolutions.com.
  */
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class LaraAdminWithoutLoginTest extends TestCase
 {
-	use DatabaseMigrations;
+    use DatabaseMigrations;
 
-	/**
-     * Basic setup before testing
+    /**
+     * Basic setup before testing.
      *
      * @return void
      */
     public function setUp()
     {
-		parent::setUp();
-		// Generate Seeds
-		$this->artisan('db:seed');
+        parent::setUp();
+        // Generate Seeds
+        $this->artisan('db:seed');
     }
 
-	/**
+    /**
      * A basic test example.
      *
      * @return void
      */
     public function testExample()
     {
-		$this->visit('/')
+        $this->visit('/')
              ->see('LaraAdmin');
     }
 
-	/**
+    /**
      * Test Login Page.
      *
      * @return void
      */
     public function testLoginPage()
     {
-		$this->visit('/login')
+        $this->visit('/login')
             ->seePageIs('/register');
     }
 
-	/**
+    /**
      * Test Register Page.
      *
      * @return void
@@ -60,7 +58,7 @@ class LaraAdminWithoutLoginTest extends TestCase
             ->see('Register Super Admin');
     }
 
-	/**
+    /**
      * Test required fields on registration page.
      *
      * @return void
@@ -74,8 +72,8 @@ class LaraAdminWithoutLoginTest extends TestCase
             ->see('The password field is required');
     }
 
-	/**
-     * Test Registration
+    /**
+     * Test Registration.
      *
      * @return void
      */
@@ -83,28 +81,28 @@ class LaraAdminWithoutLoginTest extends TestCase
     {
         $this->visit('/register')
             ->see('Register Super Admin')
-			->type('Taylor Otwell', 'name')
-			->type('test@example.com', 'email')
-			->type('12345678', 'password')
-			->type('12345678', 'password_confirmation')
-			->press('Register')
-			->seePageIs('/')
-			->click('Taylor Otwell')
-			->seePageIs('/admin')
-			->see('Dashboard')
-			->visit('/logout')
-			->seePageIs('/')
-			->click('Login')
-			->type('test@example.com', 'email')
-			->type('12345678', 'password')
-			->press('Sign In')
-			->seePageIs('/')
-			->click('Taylor Otwell')
-			->seePageIs('/admin')
-			->see('Dashboard');
+            ->type('Taylor Otwell', 'name')
+            ->type('test@example.com', 'email')
+            ->type('12345678', 'password')
+            ->type('12345678', 'password_confirmation')
+            ->press('Register')
+            ->seePageIs('/')
+            ->click('Taylor Otwell')
+            ->seePageIs('/admin')
+            ->see('Dashboard')
+            ->visit('/logout')
+            ->seePageIs('/')
+            ->click('Login')
+            ->type('test@example.com', 'email')
+            ->type('12345678', 'password')
+            ->press('Sign In')
+            ->seePageIs('/')
+            ->click('Taylor Otwell')
+            ->seePageIs('/admin')
+            ->see('Dashboard');
     }
 
-	/**
+    /**
      * Test Password reset Page.
      *
      * @return void
@@ -115,7 +113,7 @@ class LaraAdminWithoutLoginTest extends TestCase
             ->see('Reset Password');
     }
 
-	/**
+    /**
      * Test send password reset.
      *
      * @return void
@@ -130,7 +128,7 @@ class LaraAdminWithoutLoginTest extends TestCase
             ->see('We have e-mailed your password reset link!');
     }
 
-	/**
+    /**
      * Test send password reset user not exists.
      *
      * @return void
@@ -143,7 +141,7 @@ class LaraAdminWithoutLoginTest extends TestCase
             ->see('There were some problems with your input');
     }
 
-	/**
+    /**
      * Test home page is only for authorized Users.
      *
      * @return void
@@ -154,7 +152,7 @@ class LaraAdminWithoutLoginTest extends TestCase
             ->seePageIs('/register');
     }
 
-	/**
+    /**
      * Test 404 Error page.
      *
      * @return void

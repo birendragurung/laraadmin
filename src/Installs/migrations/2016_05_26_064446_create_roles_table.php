@@ -4,12 +4,11 @@
  * Help: http://laraadmin.com
  * LaraAdmin is open-sourced software licensed under the MIT license.
  * Developed by: Dwij IT Solutions
- * Developer Website: http://dwijitsolutions.com
+ * Developer Website: http://dwijitsolutions.com.
  */
 
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
 use Dwij\Laraadmin\Models\Module;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateRolesTable extends Migration
 {
@@ -20,62 +19,62 @@ class CreateRolesTable extends Migration
      */
     public function up()
     {
-        Module::generate("Roles", 'roles', 'name', 'fa-user-plus', [
+        Module::generate('Roles', 'roles', 'name', 'fa-user-plus', [
             [
-                "colname" => "name",
-                "label" => "Name",
-                "field_type" => "Name",
-                "unique" => true,
-                "defaultvalue" => "",
-                "minlength" => 1,
-                "maxlength" => 250,
-                "required" => true,
-                "listing_col" => true
+                'colname'      => 'name',
+                'label'        => 'Name',
+                'field_type'   => 'Name',
+                'unique'       => true,
+                'defaultvalue' => '',
+                'minlength'    => 1,
+                'maxlength'    => 250,
+                'required'     => true,
+                'listing_col'  => true,
             ], [
-                "colname" => "display_name",
-                "label" => "Display Name",
-                "field_type" => "String",
-                "unique" => false,
-                "defaultvalue" => "",
-                "minlength" => 0,
-                "maxlength" => 250,
-                "required" => true,
-                "listing_col" => true
+                'colname'      => 'display_name',
+                'label'        => 'Display Name',
+                'field_type'   => 'String',
+                'unique'       => false,
+                'defaultvalue' => '',
+                'minlength'    => 0,
+                'maxlength'    => 250,
+                'required'     => true,
+                'listing_col'  => true,
             ], [
-                "colname" => "description",
-                "label" => "Description",
-                "field_type" => "Textarea",
-                "unique" => false,
-                "defaultvalue" => "",
-                "minlength" => 0,
-                "maxlength" => 1000,
-                "required" => false,
-                "listing_col" => false
+                'colname'      => 'description',
+                'label'        => 'Description',
+                'field_type'   => 'Textarea',
+                'unique'       => false,
+                'defaultvalue' => '',
+                'minlength'    => 0,
+                'maxlength'    => 1000,
+                'required'     => false,
+                'listing_col'  => false,
             ], [
-                "colname" => "parent",
-                "label" => "Parent Role",
-                "field_type" => "Dropdown",
-                "unique" => false,
-                "defaultvalue" => "1",
-                "minlength" => 0,
-                "maxlength" => 0,
-                "required" => false,
-                "listing_col" => true,
-                "popup_vals" => "@roles",
+                'colname'      => 'parent',
+                'label'        => 'Parent Role',
+                'field_type'   => 'Dropdown',
+                'unique'       => false,
+                'defaultvalue' => '1',
+                'minlength'    => 0,
+                'maxlength'    => 0,
+                'required'     => false,
+                'listing_col'  => true,
+                'popup_vals'   => '@roles',
             ], [
-                "colname" => "dept",
-                "label" => "Department",
-                "field_type" => "Dropdown",
-                "unique" => false,
-                "defaultvalue" => "1",
-                "minlength" => 0,
-                "maxlength" => 0,
-                "required" => false,
-                "listing_col" => true,
-                "popup_vals" => "@departments",
-            ]
+                'colname'      => 'dept',
+                'label'        => 'Department',
+                'field_type'   => 'Dropdown',
+                'unique'       => false,
+                'defaultvalue' => '1',
+                'minlength'    => 0,
+                'maxlength'    => 0,
+                'required'     => false,
+                'listing_col'  => true,
+                'popup_vals'   => '@departments',
+            ],
         ]);
-        
+
         /*
         Module::generate("Module_Name", "Table_Name", "view_column_name" "Fields_Array");
 

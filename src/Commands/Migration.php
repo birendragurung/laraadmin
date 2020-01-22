@@ -4,32 +4,27 @@
  * Help: http://laraadmin.com
  * LaraAdmin is open-sourced software licensed under the MIT license.
  * Developed by: Dwij IT Solutions
- * Developer Website: http://dwijitsolutions.com
+ * Developer Website: http://dwijitsolutions.com.
  */
 
 namespace Dwij\Laraadmin\Commands;
 
+use Dwij\Laraadmin\CodeGenerator;
 use Illuminate\Console\Command;
 
-use Dwij\Laraadmin\CodeGenerator;
-
 /**
- * Class Migration
- * @package Dwij\Laraadmin\Commands
- *
- * Command to generation new sample migration file or complete migration file from DB Context
- * if '--generate' parameter is used after command, it generate migration from database.
+ * Class Migration.
  */
 class Migration extends Command
 {
     // The command signature.
     protected $signature = 'la:migration {table} {--generate}';
-    
+
     // The command description.
     protected $description = 'Generate Migrations for LaraAdmin';
-    
+
     /**
-     * Generate a Migration file either sample or from DB Context
+     * Generate a Migration file either sample or from DB Context.
      *
      * @return mixed
      */
@@ -37,7 +32,7 @@ class Migration extends Command
     {
         $table = $this->argument('table');
         $generateFromTable = $this->option('generate');
-        if($generateFromTable) {
+        if ($generateFromTable) {
             $generateFromTable = true;
         }
         CodeGenerator::generateMigration($table, $generateFromTable, $this);

@@ -4,12 +4,12 @@
  * Help: http://laraadmin.com
  * LaraAdmin is open-sourced software licensed under the MIT license.
  * Developed by: Dwij IT Solutions
- * Developer Website: http://dwijitsolutions.com
+ * Developer Website: http://dwijitsolutions.com.
  */
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class RoleModuleTable extends Migration
 {
@@ -20,19 +20,18 @@ class RoleModuleTable extends Migration
      */
     public function up()
     {
-        Schema::create('role_module', function(Blueprint $table)
-		{
-			$table->increments('id');
-			$table->integer('role_id')->unsigned();
-			$table->foreign('role_id')->references('id')->on('roles')->onUpdate('cascade')->onDelete('cascade');
-			$table->integer('module_id')->unsigned();
-			$table->foreign('module_id')->references('id')->on('modules')->onUpdate('cascade')->onDelete('cascade');
+        Schema::create('role_module', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('role_id')->unsigned();
+            $table->foreign('role_id')->references('id')->on('roles')->onUpdate('cascade')->onDelete('cascade');
+            $table->integer('module_id')->unsigned();
+            $table->foreign('module_id')->references('id')->on('modules')->onUpdate('cascade')->onDelete('cascade');
             $table->boolean('acc_view');
             $table->boolean('acc_create');
             $table->boolean('acc_edit');
             $table->boolean('acc_delete');
-			$table->timestamps();
-		});
+            $table->timestamps();
+        });
     }
 
     /**

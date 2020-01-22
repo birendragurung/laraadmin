@@ -4,18 +4,15 @@
  * Help: http://laraadmin.com
  * LaraAdmin is open-sourced software licensed under the MIT license.
  * Developed by: Dwij IT Solutions
- * Developer Website: http://dwijitsolutions.com
+ * Developer Website: http://dwijitsolutions.com.
  */
 
 namespace App\Http\Controllers\LA;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
-use Illuminate\Http\Request;
 
 /**
- * Class DashboardController
- * @package App\Http\Controllers
+ * Class DashboardController.
  */
 class DashboardController extends Controller
 {

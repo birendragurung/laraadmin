@@ -4,13 +4,13 @@
  * Help: http://laraadmin.com
  * LaraAdmin is open-sourced software licensed under the MIT license.
  * Developed by: Dwij IT Solutions
- * Developer Website: http://dwijitsolutions.com
+ * Developer Website: http://dwijitsolutions.com.
  */
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
 use Dwij\Laraadmin\Models\ModuleFieldTypes;
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateModuleFieldTypesTable extends Migration
 {
@@ -27,30 +27,30 @@ class CreateModuleFieldTypesTable extends Migration
             $table->timestamps();
         });
         // Note: Do not edit below lines
-        ModuleFieldTypes::create(["name" => "Address"]);
-        ModuleFieldTypes::create(["name" => "Checkbox"]);
-        ModuleFieldTypes::create(["name" => "Currency"]);
-        ModuleFieldTypes::create(["name" => "Date"]);
-        ModuleFieldTypes::create(["name" => "Datetime"]);
-        ModuleFieldTypes::create(["name" => "Decimal"]);
-        ModuleFieldTypes::create(["name" => "Dropdown"]);
-        ModuleFieldTypes::create(["name" => "Email"]);
-        ModuleFieldTypes::create(["name" => "File"]);
-        ModuleFieldTypes::create(["name" => "Float"]);
-        ModuleFieldTypes::create(["name" => "HTML"]);
-        ModuleFieldTypes::create(["name" => "Image"]);
-        ModuleFieldTypes::create(["name" => "Integer"]);
-        ModuleFieldTypes::create(["name" => "Mobile"]);
-        ModuleFieldTypes::create(["name" => "Multiselect"]);
-        ModuleFieldTypes::create(["name" => "Name"]);
-        ModuleFieldTypes::create(["name" => "Password"]);
-        ModuleFieldTypes::create(["name" => "Radio"]);
-        ModuleFieldTypes::create(["name" => "String"]);
-        ModuleFieldTypes::create(["name" => "Taginput"]);
-        ModuleFieldTypes::create(["name" => "Textarea"]);
-        ModuleFieldTypes::create(["name" => "TextField"]);
-        ModuleFieldTypes::create(["name" => "URL"]);
-        ModuleFieldTypes::create(["name" => "Files"]);
+        ModuleFieldTypes::create(['name' => 'Address']);
+        ModuleFieldTypes::create(['name' => 'Checkbox']);
+        ModuleFieldTypes::create(['name' => 'Currency']);
+        ModuleFieldTypes::create(['name' => 'Date']);
+        ModuleFieldTypes::create(['name' => 'Datetime']);
+        ModuleFieldTypes::create(['name' => 'Decimal']);
+        ModuleFieldTypes::create(['name' => 'Dropdown']);
+        ModuleFieldTypes::create(['name' => 'Email']);
+        ModuleFieldTypes::create(['name' => 'File']);
+        ModuleFieldTypes::create(['name' => 'Float']);
+        ModuleFieldTypes::create(['name' => 'HTML']);
+        ModuleFieldTypes::create(['name' => 'Image']);
+        ModuleFieldTypes::create(['name' => 'Integer']);
+        ModuleFieldTypes::create(['name' => 'Mobile']);
+        ModuleFieldTypes::create(['name' => 'Multiselect']);
+        ModuleFieldTypes::create(['name' => 'Name']);
+        ModuleFieldTypes::create(['name' => 'Password']);
+        ModuleFieldTypes::create(['name' => 'Radio']);
+        ModuleFieldTypes::create(['name' => 'String']);
+        ModuleFieldTypes::create(['name' => 'Taginput']);
+        ModuleFieldTypes::create(['name' => 'Textarea']);
+        ModuleFieldTypes::create(['name' => 'TextField']);
+        ModuleFieldTypes::create(['name' => 'URL']);
+        ModuleFieldTypes::create(['name' => 'Files']);
     }
 
     /**
