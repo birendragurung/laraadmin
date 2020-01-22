@@ -4,12 +4,12 @@
  * Help: http://laraadmin.com
  * LaraAdmin is open-sourced software licensed under the MIT license.
  * Developed by: Dwij IT Solutions
- * Developer Website: http://dwijitsolutions.com
+ * Developer Website: http://dwijitsolutions.com.
  */
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateMenusTable extends Migration
 {
@@ -24,8 +24,8 @@ class CreateMenusTable extends Migration
             $table->increments('id');
             $table->string('name', 50);
             $table->string('url', 256);
-            $table->string('icon', 50)->default("fa-cube");
-            $table->string('type', 20)->default("module");
+            $table->string('icon', 50)->default('fa-cube');
+            $table->string('type', 20)->default('module');
             $table->integer('parent')->unsigned()->default(0);
             $table->integer('hierarchy')->unsigned()->default(0);
             $table->timestamps();

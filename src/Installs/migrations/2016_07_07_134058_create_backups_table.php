@@ -4,12 +4,11 @@
  * Help: http://laraadmin.com
  * LaraAdmin is open-sourced software licensed under the MIT license.
  * Developed by: Dwij IT Solutions
- * Developer Website: http://dwijitsolutions.com
+ * Developer Website: http://dwijitsolutions.com.
  */
 
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
 use Dwij\Laraadmin\Models\Module;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateBackupsTable extends Migration
 {
@@ -20,40 +19,40 @@ class CreateBackupsTable extends Migration
      */
     public function up()
     {
-        Module::generate("Backups", 'backups', 'name', 'fa-hdd-o', [
+        Module::generate('Backups', 'backups', 'name', 'fa-hdd-o', [
             [
-                "colname" => "name",
-                "label" => "Name",
-                "field_type" => "Name",
-                "unique" => true,
-                "defaultvalue" => "",
-                "minlength" => 0,
-                "maxlength" => 250,
-                "required" => true,
-                "listing_col" => true
+                'colname'      => 'name',
+                'label'        => 'Name',
+                'field_type'   => 'Name',
+                'unique'       => true,
+                'defaultvalue' => '',
+                'minlength'    => 0,
+                'maxlength'    => 250,
+                'required'     => true,
+                'listing_col'  => true,
             ], [
-                "colname" => "file_name",
-                "label" => "File Name",
-                "field_type" => "String",
-                "unique" => true,
-                "defaultvalue" => "",
-                "minlength" => 0,
-                "maxlength" => 250,
-                "required" => true,
-                "listing_col" => true
+                'colname'      => 'file_name',
+                'label'        => 'File Name',
+                'field_type'   => 'String',
+                'unique'       => true,
+                'defaultvalue' => '',
+                'minlength'    => 0,
+                'maxlength'    => 250,
+                'required'     => true,
+                'listing_col'  => true,
             ], [
-                "colname" => "backup_size",
-                "label" => "File Size",
-                "field_type" => "String",
-                "unique" => false,
-                "defaultvalue" => "0",
-                "minlength" => 0,
-                "maxlength" => 10,
-                "required" => true,
-                "listing_col" => false
-            ]
+                'colname'      => 'backup_size',
+                'label'        => 'File Size',
+                'field_type'   => 'String',
+                'unique'       => false,
+                'defaultvalue' => '0',
+                'minlength'    => 0,
+                'maxlength'    => 10,
+                'required'     => true,
+                'listing_col'  => false,
+            ],
         ]);
-        
+
         /*
         Module::generate("Module_Name", "Table_Name", "view_column_name" "Fields_Array");
 

@@ -4,12 +4,11 @@
  * Help: http://laraadmin.com
  * LaraAdmin is open-sourced software licensed under the MIT license.
  * Developed by: Dwij IT Solutions
- * Developer Website: http://dwijitsolutions.com
+ * Developer Website: http://dwijitsolutions.com.
  */
 
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
 use Dwij\Laraadmin\Models\Module;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateUsersTable extends Migration
 {
@@ -20,61 +19,61 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Module::generate("Users", 'users', 'name', 'fa-group', [
+        Module::generate('Users', 'users', 'name', 'fa-group', [
             [
-                "colname" => "name",
-                "label" => "Name",
-                "field_type" => "Name",
-                "unique" => false,
-                "defaultvalue" => "",
-                "minlength" => 5,
-                "maxlength" => 250,
-                "required" => true,
-                "listing_col" => true
+                'colname'      => 'name',
+                'label'        => 'Name',
+                'field_type'   => 'Name',
+                'unique'       => false,
+                'defaultvalue' => '',
+                'minlength'    => 5,
+                'maxlength'    => 250,
+                'required'     => true,
+                'listing_col'  => true,
             ], [
-                "colname" => "context_id",
-                "label" => "Context",
-                "field_type" => "Integer",
-                "unique" => false,
-                "defaultvalue" => "0",
-                "minlength" => 0,
-                "maxlength" => 0,
-                "required" => false,
-                "listing_col" => false
+                'colname'      => 'context_id',
+                'label'        => 'Context',
+                'field_type'   => 'Integer',
+                'unique'       => false,
+                'defaultvalue' => '0',
+                'minlength'    => 0,
+                'maxlength'    => 0,
+                'required'     => false,
+                'listing_col'  => false,
             ], [
-                "colname" => "email",
-                "label" => "Email",
-                "field_type" => "Email",
-                "unique" => true,
-                "defaultvalue" => "",
-                "minlength" => 0,
-                "maxlength" => 250,
-                "required" => false,
-                "listing_col" => true
+                'colname'      => 'email',
+                'label'        => 'Email',
+                'field_type'   => 'Email',
+                'unique'       => true,
+                'defaultvalue' => '',
+                'minlength'    => 0,
+                'maxlength'    => 250,
+                'required'     => false,
+                'listing_col'  => true,
             ], [
-                "colname" => "password",
-                "label" => "Password",
-                "field_type" => "Password",
-                "unique" => false,
-                "defaultvalue" => "",
-                "minlength" => 6,
-                "maxlength" => 250,
-                "required" => true,
-                "listing_col" => false
+                'colname'      => 'password',
+                'label'        => 'Password',
+                'field_type'   => 'Password',
+                'unique'       => false,
+                'defaultvalue' => '',
+                'minlength'    => 6,
+                'maxlength'    => 250,
+                'required'     => true,
+                'listing_col'  => false,
             ], [
-                "colname" => "type",
-                "label" => "User Type",
-                "field_type" => "Dropdown",
-                "unique" => false,
-                "defaultvalue" => "Employee",
-                "minlength" => 0,
-                "maxlength" => 0,
-                "required" => false,
-                "listing_col" => true,
-                "popup_vals" => ["Employee","Client"],
-            ]
+                'colname'      => 'type',
+                'label'        => 'User Type',
+                'field_type'   => 'Dropdown',
+                'unique'       => false,
+                'defaultvalue' => 'Employee',
+                'minlength'    => 0,
+                'maxlength'    => 0,
+                'required'     => false,
+                'listing_col'  => true,
+                'popup_vals'   => ['Employee', 'Client'],
+            ],
         ]);
-        
+
         /*
         Module::generate("Module_Name", "Table_Name", "view_column_name" "Fields_Array");
 
